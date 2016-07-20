@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:oxm="http://www.springframework.org/schema/oxm"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/oxm 
+http://www.springframework.org/schema/oxm/spring-oxm.xsd">
+<bean id="null" class="com.luck.tool.Null" />
+<bean id="pipe1" class="com.luck.model.Pipe">
+<constructor-arg index="0" value="880"/>
+</bean>
+<bean id="pipe2" class="com.luck.model.Pipe">
+<constructor-arg index="0" value="590"/>
+</bean>
+<bean id="badflower1" class="com.luck.model.BadFlower">
+<constructor-arg index="0" value="590"/>
+<constructor-arg index="1" value="508"/>
+<constructor-arg index="2" ref="pipe2"/>
+</bean>
+<bean id="money1" class="com.luck.model.Money">
+<constructor-arg index="0" value="880"/>
+<constructor-arg index="1" value="370"/>
+</bean>
+<bean id="wall1" class="com.luck.model.Wall">
+<constructor-arg index="0" value="250"/>
+<constructor-arg index="1" value="460"/>
+<constructor-arg index="2" value="true"/>
+<constructor-arg index="3" ref="null"/>
+</bean>
+<bean id="wall2" class="com.luck.model.Wall">
+<constructor-arg index="0" value="300"/>
+<constructor-arg index="1" value="460"/>
+<constructor-arg index="2" value="false"/>
+<constructor-arg index="3" ref="mushroom1"/>
+</bean>
+<bean id="mushroom1" class="com.luck.model.Mushroom">
+<constructor-arg index="0" value="300"/>
+<constructor-arg index="1" value="410"/>
+</bean>
+</beans>
